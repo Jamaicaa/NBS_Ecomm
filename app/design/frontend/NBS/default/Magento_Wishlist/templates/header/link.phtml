@@ -1,0 +1,10 @@
+<?php
+$wishlistHelper = $this->helper('Magento\Wishlist\Helper\Data');
+?>
+<?php if ($wishlistHelper->isAllow()) : ?>
+    <div class="wishlist-wrapper">
+        <a class="action" href="<?php echo $this->getUrl('wishlist') ?>">
+            <span class="text"><?php echo __('My Wishlist') ?></span>
+        </a>
+    </div>
+<?php endif; ?>

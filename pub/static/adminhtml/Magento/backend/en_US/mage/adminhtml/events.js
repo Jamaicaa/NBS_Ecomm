@@ -1,0 +1,1 @@
+/var/www/nbs-ecommerce/lib/web/mage/adminhtml/events.js

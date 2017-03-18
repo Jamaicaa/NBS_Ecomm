@@ -1,0 +1,108 @@
+@toplink-icons-color: @primary-color-dark-grey;
+@toplink-icons-color-hover: @secondary-color-dark-grey;
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  .top-header {
+    display: none;
+  }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .logo {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  .header.content {
+    padding-top: 15px;
+  }
+  .top-header {
+    float: right;
+    min-width: 840px;
+    width: 80%;
+    .col-left {
+      float: left;
+      & .topbar-links {
+        padding-left: 0;
+      }
+    }
+    .col-right {
+      float: right;
+    }
+    ul.topbar-links {
+      list-style: none;
+      margin-bottom: 1.1rem;
+      li {
+        font-size: 1.285rem;
+        display: inline;
+        & > a {
+          color: @toplink-icons-color;
+          text-decoration: none;
+        }
+        & > a > span {
+          padding-left: 5px;
+        }
+        &:not(:last-child) {
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+  .logo {
+    width: 20%;
+  }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+  .wishlist-wrapper, .account-wrapper, .minicart-wrapper {
+    margin-top: @indent__s;
+  }
+}
+
+.wishlist-wrapper, .account-wrapper, .minicart-wrapper {
+  float: right;
+  margin-left: 15px;
+  & > .action {
+    &:before {
+      font-family: 'nbs icons' !important;
+      -webkit-font-smoothing: antialiased;
+      font-size: 22px;
+      line-height: 28px;
+      color: @toplink-icons-color !important;
+      margin: 0;
+      vertical-align: top;
+      display: inline-block;
+      font-weight: normal;
+      speak: none;
+      text-align: center;
+    }
+    &.active:before, &:hover:before{
+      color: @toplink-icons-color-hover !important;
+    }
+    .text {
+      .disappear;
+    }
+  }
+}
+
+.wishlist-wrapper .action:before {
+  content:'\004a' !important;
+  font-weight: 900 !important;
+}
+.account-wrapper .action:before {
+  content:'\0047' !important;
+  font-weight: 500 !important;
+}
+.minicart-wrapper .action.showcart:before {
+  content:'\0049' !important;
+  font-weight: 900 !important;
+}
+
+.disappear() {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

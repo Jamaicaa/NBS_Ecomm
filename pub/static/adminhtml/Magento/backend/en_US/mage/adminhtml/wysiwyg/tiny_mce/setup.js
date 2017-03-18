@@ -1,0 +1,1 @@
+/var/www/nbs-ecommerce/lib/web/mage/adminhtml/wysiwyg/tiny_mce/setup.js

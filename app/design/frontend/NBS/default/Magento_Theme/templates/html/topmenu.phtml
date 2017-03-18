@@ -1,0 +1,66 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @var $block \Magento\Theme\Block\Html\Topmenu
+ */
+?>
+<?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
+<?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+
+<nav class="top-navigation">
+    <ul class="main-nav">
+        <li class="item outer-level departments-dd">
+            <a href="#">
+                <span><?php echo __('All Departments')?></span>
+            </a>
+            <div class="menu-container">
+                <ul class="menu-items">
+                    <?php /* @escapeNotVerified */ echo $_menu; ?>
+                    <li class="level0 nav-6 last level-top"><a href="#" class="level-top"><span>See All Departments</span></a></li>
+                </ul>
+                <div class="sub-menu" id="submenu-container">
+                </div>
+                <div class="promo-block">
+                    <p>Top Best Selling Books of the Year So Far</p>
+                    <p>Fiction Bestsellers</p>
+                    <img src='<?php echo $this->getViewFileUrl('images/free-delivery.jpg'); ?>' alt="Promotion"/>
+                    <?php /* @escapeNotVerified */ echo $block->getChildHtml(); ?>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+    <?php /* @escapeNotVerified */ // echo $block->getChildHtml(); ?>
+</nav>
+<script type="text/javascript">
+    require(['jquery'], function($){
+        $('ul.menu-items li.level0').hover( function () {
+            $('#submenu-container').html('');
+            $('ul.menu-items li.level0').removeClass('active');
+            if ($(this).hasClass('parent')) {
+                $(this).addClass('active');
+                var subMenu = $(this).find('ul.level0.submenu');
+                subMenu.clone().appendTo('#submenu-container');
+                subMenu.clone().appendTo('#submenu-container');
+                subMenu.clone().appendTo('#submenu-container');
+                subMenu.clone().appendTo('#submenu-container');
+                subMenu.clone().appendTo('#submenu-container');
+                subMenu.clone().appendTo('#submenu-container');
+                subMenu.clone().appendTo('#submenu-container');
+                subMenu.clone().appendTo('#submenu-container');
+                subMenu.clone().appendTo('#submenu-container');
+            }
+        });
+    });
+</script>
+

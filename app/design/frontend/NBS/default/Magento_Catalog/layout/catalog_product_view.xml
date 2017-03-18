@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="page.main.title" destination="columns" before="-"/>
+        <move element="product.info.review" destination="page.main.title" after="-"/>
+        <move element="view.addto.wishlist" destination="product.info.addtocart" after="-"/>
+        <move element="product.info.overview" destination="product.info.media" after="-"/>
+
+        <referenceContainer name="view.addto.compare" remove="true"/>
+        <referenceContainer name="product.info.mailto" remove="true"/>
+
+        <referenceBlock name="product.info.sku" remove="true"/>
+
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Catalog\Block\Product\View" name="product.info.isbestseller"
+                   template="Magento_Catalog::product/bestseller.phtml" before="product.info.price"/>
+
+            <container name="product.info.delivery" htmlTag="div" htmlClass="product-delivery-details"
+                       after="product.info.addtocart">
+                <block class="Magento\Catalog\Block\Product\View" name="product.info.shipping.pickup"
+                       template="Magento_Catalog::product/shipping_pickup.phtml"/>
+
+                <block class="Magento\Catalog\Block\Product\View" name="product.info.payment.methods"
+                       template="Magento_Catalog::product/payment-methods.phtml"/>
+
+                <block class="Magento\Catalog\Block\Product\View" name="product.info.delivery.estimate"
+                       template="Magento_Catalog::product/delivery_estimate.phtml"/>
+            </container>
+
+            <block class="Magento\Catalog\Block\Product\View" name="product.info.marketing"
+                   template="Magento_Catalog::product/marketing.phtml" after="product.info.delivery"/>
+        </referenceContainer>
+    </body>
+</page>

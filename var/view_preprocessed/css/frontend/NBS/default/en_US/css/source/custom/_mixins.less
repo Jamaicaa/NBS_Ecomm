@@ -1,0 +1,34 @@
+/*
+  easing mixin
+ */
+.easing {
+  -webkit-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+  -moz-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+  -o-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
+  transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000); /* ease-in-out */
+
+  -webkit-transition-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+  -moz-transition-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+  -o-transition-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+  transition-timing-function: cubic-bezier(0.420, 0.000, 0.580, 1.000); /* ease-in-out */
+}
+
+/**
+  icon mixin
+ */
+.nbs-icon {
+  font-family: @nbs-icon-family-name;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #8f8f8f;
+  margin: 0;
+  vertical-align: top;
+  display: inline-block;
+  font-weight: normal;
+  overflow: hidden;
+  speak: none;
+  text-align: center;
+}

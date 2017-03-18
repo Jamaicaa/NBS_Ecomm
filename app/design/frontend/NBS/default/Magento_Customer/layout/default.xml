@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header-wrapper">
+            <block class="\Magento\Framework\View\Element\Template" name="customer.account.top.link"
+                   template="Magento_Customer::account/toplink.phtml" after="wishlist.header.link">
+                <block class="Magento\Framework\View\Element\Html\Links" name="customer.account.dd.links">
+                    <block class="Magento\Customer\Block\Account\RegisterLink" name="register-link">
+                        <arguments>
+                            <argument name="label" xsi:type="string" translate="true">Create an Account</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Customer\Block\Account\AuthorizationLink" name="authorization-link"
+                           template="account/link/authorization.phtml"/>
+                </block>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="top.links" remove="true"/>
+    </body>
+</page>

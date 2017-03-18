@@ -1,0 +1,11 @@
+<!--
+/**
+ * Copyright (C) 2017 STH Internet Publishing - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ */
+-->
+<theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
+    <title>National Book Store Default Theme</title>
+    <parent>Magento/luma</parent>
+</theme>

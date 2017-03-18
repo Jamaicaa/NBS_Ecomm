@@ -1,0 +1,109 @@
+& when (@media-common = true) {
+  .minicart-wrapper .action.showcart .counter.qty {
+    background: @primary-theme-color;
+    border-radius: 50%;
+    position: absolute;
+    top: -2px;
+    font-size: 11px;
+    left: 10px;
+    height: 14px;
+    line-height: 16px;
+    min-width: 10px;
+  }
+
+  .minicart-wrapper {
+    .block-minicart {
+      top: 55px;
+      border-top: none;
+      padding: 25px 0 0;
+      &:before, &:after {
+        display: none;
+      }
+      .items-total {
+        margin: 0 15px;
+      }
+      .subtotal {
+        margin: 0 15px;
+        .price-wrapper .price {
+          color: @primary-theme-color;
+        }
+      }
+      .action.close {
+        display: none;
+      }
+      .minicart-items-wrapper {
+        margin: 0;
+        .minicart-items .product .toggle {
+          & > span {
+            display: none;
+          }
+          &:after {
+            font-size: 35px;
+            font-weight: 900;
+            margin-left: -10px;
+          }
+        }
+        .minicart-items .product .product-item-pricing .details-qty.qty {
+          & > label {
+            width: 3rem;
+          }
+          & > input.item-qty.cart-item-qty {
+            background: @input-background-color;
+            border: none;
+            margin-right: 5px;
+          }
+          & > button.update-cart-item {
+            padding: 8px;
+            &:hover {
+              border: none;
+            }
+          }
+        }
+        .minicart-items .action.edit:before {
+          content: '\e601';
+          font-family: @luma__font-name;
+          font-size: 18px;
+          line-height: 18px;
+          font-weight: normal;
+        }
+        .minicart-items .action.delete:before {
+          content: '\e604';
+          font-weight: normal;
+          font-size: 35px;
+          line-height: 18px;
+          color: @primary-theme-color;;
+        }
+      }
+
+
+      & .block-content {
+        & > .actions > .primary {
+          margin: 0;
+          background-color: @primary-theme-color;
+          border: 1px solid @primary-theme-color;
+          button.action.primary.checkout {
+            background: transparent;
+            border: none;
+            padding: 10px 0;
+            margin: 0;
+            & > span {
+              line-height: normal;
+            }
+          }
+        }
+        & > .actions > .secondary .action {
+          text-transform: uppercase;
+        }
+      }
+
+    }
+  }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .minicart-wrapper {
+    .block-minicart {
+      right: 0;
+    }
+  }
+}

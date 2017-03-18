@@ -1,0 +1,23 @@
+<div data-block="account-dropdown" class="account-wrapper">
+    <a class="action show-account-actions" href="<?php /* @escapeNotVerified */ echo $block->getShoppingCartUrl(); ?>"
+       data-bind="scope: 'account_actions_content'">
+        <span class="text"><?php /* @escapeNotVerified */ echo __('Account'); ?></span>
+    </a>
+    <div class="block block-account-actions empty" data-role="dropdownDialog"
+         data-mage-init='{"dropdownDialog":{
+                "appendTo":"[data-block=account-dropdown]",
+                "triggerTarget":".show-account-actions",
+                "timeout": "2000",
+                "closeOnMouseLeave": false,
+                "closeOnEscape": true,
+                "triggerClass":"active",
+                "parentClass":"active",
+                "buttons":[]}}'>
+        <div id="minicart-content-wrapper" data-bind="scope: 'account_actions_content'">
+            <ul>
+                <li>Login</li>
+                <li>Login</li>
+            </ul>
+        </div>
+    </div>
+</div>
