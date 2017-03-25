@@ -1105,3 +1105,53 @@ variable @media-common is undefined in file /var/www/nbs-ecommerce/var/view_prep
 [2017-03-18 07:57:20] main.INFO: Add of item with id Magento_Variable::system_variable was processed [] []
 [2017-03-18 07:57:20] main.INFO: Add of item with id Magento_Braintree::settlement_report was processed [] []
 [2017-03-18 07:57:20] main.INFO: Remove on item with id Magento_Backend::setup_wizard was processed [] []
+[2017-03-23 10:48:51] main.CRITICAL: 
+Compilation from source: 
+frontend/NBS/default/en_US/css/print.less
+variable @media-common is undefined in file /var/www/nbs-ecommerce/var/view_preprocessed/css/frontend/NBS/default/en_US/css/source/custom/_minicart.less in _minicart.less on line 1, column 8
+1| & when (@media-common = true) {
+2|   .minicart-wrapper .action.showcart .counter.qty {
+3|     background: @primary-theme-color;
+4|     border-radius: 50%;
+5|     position: absolute;
+6|     top: -2px; [] []
+[2017-03-23 11:05:31] main.CRITICAL: 
+Compilation from source: 
+frontend/NBS/default/en_US/css/print.less
+variable @media-common is undefined in file /var/www/nbs-ecommerce/var/view_preprocessed/css/frontend/NBS/default/en_US/css/source/custom/_minicart.less in _minicart.less on line 1, column 8
+1| & when (@media-common = true) {
+2|   .minicart-wrapper .action.showcart .counter.qty {
+3|     background: @primary-theme-color;
+4|     border-radius: 50%;
+5|     position: absolute;
+6|     top: -2px; [] []
+[2017-03-23 11:42:15] main.CRITICAL: 
+Compilation from source: 
+frontend/NBS/default/en_US/css/print.less
+variable @media-common is undefined in file /var/www/nbs-ecommerce/var/view_preprocessed/css/frontend/NBS/default/en_US/css/source/custom/_minicart.less in _minicart.less on line 1, column 8
+1| & when (@media-common = true) {
+2|   .minicart-wrapper .action.showcart .counter.qty {
+3|     background: @primary-theme-color;
+4|     border-radius: 50%;
+5|     position: absolute;
+6|     top: -2px; [] []
+[2017-03-25 11:12:12] main.CRITICAL: 
+Compilation from source: 
+frontend/NBS/default/en_US/css/print.less
+variable @media-common is undefined in file /var/www/nbs-ecommerce/var/view_preprocessed/css/frontend/NBS/default/en_US/css/source/custom/_minicart.less in _minicart.less on line 1, column 8
+1| & when (@media-common = true) {
+2|   .minicart-wrapper .action.showcart .counter.qty {
+3|     background: @primary-theme-color;
+4|     border-radius: 50%;
+5|     position: absolute;
+6|     top: -2px; [] []
+[2017-03-25 15:22:52] main.CRITICAL: 
+Compilation from source: 
+frontend/NBS/default/en_US/css/print.less
+variable @media-common is undefined in file /var/www/nbs-ecommerce/var/view_preprocessed/css/frontend/NBS/default/en_US/css/source/custom/_minicart.less in _minicart.less on line 1, column 8
+1| & when (@media-common = true) {
+2|   .minicart-wrapper .action.showcart .counter.qty {
+3|     background: @primary-theme-color;
+4|     border-radius: 50%;
+5|     position: absolute;
+6|     top: -2px; [] []

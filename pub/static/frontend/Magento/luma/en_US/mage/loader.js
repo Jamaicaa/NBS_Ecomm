@@ -1,1 +1,0 @@
-/var/www/nbs-ecommerce/lib/web/mage/loader.js

@@ -3,7 +3,7 @@
        data-bind="scope: 'account_actions_content'">
         <span class="text"><?php /* @escapeNotVerified */ echo __('Account'); ?></span>
     </a>
-    <div class="block block-account-actions empty" data-role="dropdownDialog"
+    <div class="block topbar-dropdown block-account-actions empty" data-role="dropdownDialog"
          data-mage-init='{"dropdownDialog":{
                 "appendTo":"[data-block=account-dropdown]",
                 "triggerTarget":".show-account-actions",
@@ -15,8 +15,30 @@
                 "buttons":[]}}'>
         <div id="minicart-content-wrapper" data-bind="scope: 'account_actions_content'">
             <ul>
-                <li>Login</li>
-                <li>Login</li>
+                <?php if($block->customerLoggedIn()): ?>
+                <li>
+                    <a href="/customer/account">My Account</a>
+                </li>
+                <li>
+                    <a href="/sales/order/history">My Orders</a>
+                </li>
+                <li>
+                    <a href="/checkout/cart">My Cart</a>
+                </li>
+                <li>
+                    <a href="/wishlist">My Wishlist</a>
+                </li>
+                <li>
+                    <a href="/customer/account/logout">Logout</a>
+                </li>
+                <?php else: ?>
+                <li>
+                    <a href="/customer/account/login">Login</a>
+                </li>
+                <li>
+                    <a href="/customer/account/create">Register</a>
+                </li>
+                <?php endif; ?>
             </ul>
         </div>
     </div>

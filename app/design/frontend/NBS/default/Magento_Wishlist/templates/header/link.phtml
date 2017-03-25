@@ -2,9 +2,21 @@
 $wishlistHelper = $this->helper('Magento\Wishlist\Helper\Data');
 ?>
 <?php if ($wishlistHelper->isAllow()) : ?>
-    <div class="wishlist-wrapper">
-        <a class="action" href="<?php echo $this->getUrl('wishlist') ?>">
+    <div data-block="wishlist-dropdown" class="wishlist-wrapper">
+        <a class="action show-wishlist-actions" href="<?php echo $this->getUrl('wishlist') ?>">
             <span class="text"><?php echo __('My Wishlist') ?></span>
         </a>
+        <div class="block topbar-dropdown block-account-actions empty" data-role="dropdownDialog"
+             data-mage-init='{"dropdownDialog":{
+                "appendTo":"[data-block=wishlist-dropdown]",
+                "triggerTarget":".show-wishlist-actions",
+                "timeout": "2000",
+                "closeOnMouseLeave": false,
+                "closeOnEscape": true,
+                "triggerClass":"active",
+                "parentClass":"active",
+                "buttons":[]}}'>
+            <?php echo $block->getChildHtml(); ?>
+        </div>
     </div>
 <?php endif; ?>

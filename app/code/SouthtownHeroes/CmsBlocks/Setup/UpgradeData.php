@@ -145,6 +145,38 @@ HTML;
 
         } // version 1.0.2
 
+        if (version_compare($context->getVersion(), '1.0.3', '<')) {
+
+            $content = <<<HTML
+<li class="item outer-level">
+    <a href="#">Back to School Sale</a>
+</li>
+<li class="item outer-level">
+    <a href="#">Gift Guide</a>
+</li>
+<li class="item outer-level">
+    <a href="#">Cash on Delivery</a>
+</li>
+<li class="item outer-level">
+    <a href="#">Tips &amp; Ideas</a>
+</li>
+HTML;
+
+            $block = [
+                'title' => 'NBS top navigation blocks',
+                'identifier' => 'nbs-top-navigation-blocks',
+                'content' => $content,
+                'stores' => [0],
+                'is_active' => 1,
+            ];
+
+            try {
+                $this->blockFactory->create()->setData($block)->save();
+            } catch (\Exception $e) {
+                $this->logger->critical($e->__toString());
+            }
+        } // version 1.0.3
+
         $installer->endSetup();
     }
 }

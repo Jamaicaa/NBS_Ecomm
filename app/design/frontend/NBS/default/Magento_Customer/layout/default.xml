@@ -8,7 +8,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="header-wrapper">
-            <block class="\Magento\Framework\View\Element\Template" name="customer.account.top.link"
+            <block class="\Magento\Customer\Block\Account\Customer" name="customer.account.top.link"
                    template="Magento_Customer::account/toplink.phtml" after="wishlist.header.link">
                 <block class="Magento\Framework\View\Element\Html\Links" name="customer.account.dd.links">
                     <block class="Magento\Customer\Block\Account\RegisterLink" name="register-link">

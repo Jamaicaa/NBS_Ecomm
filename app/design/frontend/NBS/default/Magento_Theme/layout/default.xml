@@ -31,7 +31,14 @@
                 </container>
             </container>
         </referenceContainer>
-
+        <referenceBlock name="catalog.topnav">
+            <block class="Magento\Cms\Block\Block" name="navigation-blocks">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">nbs-top-navigation-blocks</argument>
+                </arguments>
+            </block>
+            <container name="topmenu-promotions"/>
+        </referenceBlock>
         <referenceContainer name="cms_footer_links_container">
             <block class="Magento\Cms\Block\Block">
                 <arguments>
@@ -40,7 +47,6 @@
             </block>
 
         </referenceContainer>
-
 
         <move element="copyright" destination="before.body.end"/>
         <referenceBlock name="store_switcher" remove="true"/>

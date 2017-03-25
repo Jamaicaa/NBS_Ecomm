@@ -1,5 +1,4 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1489823622;s:6:"expire";i:1489827222;s:4:"tags";s:44:"083_BLOCK_HTML,083_CATALOG_CATEGORY,083_MAGE";}
-
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1490440328;s:6:"expire";i:1490443928;s:4:"tags";s:44:"083_BLOCK_HTML,083_CATALOG_CATEGORY,083_MAGE";}
 <nav class="top-navigation">
     <ul class="main-nav">
         <li class="item outer-level departments-dd">
@@ -15,13 +14,12 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1489823622;s:6:"expire";i:1489827222;s:4:"t
                 <div class="promo-block">
                     <p>Top Best Selling Books of the Year So Far</p>
                     <p>Fiction Bestsellers</p>
-                    <img src='http://localhost:8585/static/version1489744245/frontend/NBS/default/en_US/images/free-delivery.jpg' alt="Promotion"/>
+                    <img src='http://localhost:8585/static/version1490269304/frontend/NBS/default/en_US/images/free-delivery.jpg' alt="Promotion"/>
                                     </div>
             </div>
         </li>
-
-    </ul>
-    </nav>
+            </ul>
+</nav>
 <script type="text/javascript">
     require(['jquery'], function($){
         $('ul.menu-items li.level0').hover( function () {

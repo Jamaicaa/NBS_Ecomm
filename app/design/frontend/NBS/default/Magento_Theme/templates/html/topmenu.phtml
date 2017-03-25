@@ -16,7 +16,6 @@
 ?>
 <?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
 <?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
-
 <nav class="top-navigation">
     <ul class="main-nav">
         <li class="item outer-level departments-dd">
@@ -34,13 +33,12 @@
                     <p>Top Best Selling Books of the Year So Far</p>
                     <p>Fiction Bestsellers</p>
                     <img src='<?php echo $this->getViewFileUrl('images/free-delivery.jpg'); ?>' alt="Promotion"/>
-                    <?php /* @escapeNotVerified */ echo $block->getChildHtml(); ?>
+                    <?php echo $block->getChildHtml('topmenu-promotions'); ?>
                 </div>
             </div>
         </li>
-
+        <?php echo $block->getChildHtml('navigation-blocks'); ?>
     </ul>
-    <?php /* @escapeNotVerified */ // echo $block->getChildHtml(); ?>
 </nav>
 <script type="text/javascript">
     require(['jquery'], function($){

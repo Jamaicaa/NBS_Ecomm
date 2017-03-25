@@ -9,7 +9,10 @@
     <body>
         <referenceContainer name="header-wrapper">
             <block class="\Magento\Framework\View\Element\Template" name="wishlist.header.link"
-                   template="Magento_Wishlist::header/link.phtml" after="minicart"/>
+                   template="Magento_Wishlist::header/link.phtml" after="minicart">
+                <block class="Magento\Wishlist\Block\Customer\Sidebar" name="wishlist_sidebar" as="wishlist" template="Magento_Wishlist::header/top-item.phtml"/>
+            </block>
         </referenceContainer>
+        <referenceContainer name="sidebar.additional" remove="true"/>
     </body>
 </page>

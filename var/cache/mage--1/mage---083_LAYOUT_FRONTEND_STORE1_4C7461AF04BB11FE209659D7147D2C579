@@ -1,4 +1,4 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1489823621;s:6:"expire";i:9999999999;s:4:"tags";s:115:"083_DEFAULT,083_CMS_INDEX_INDEX,083_CMS_PAGE_VIEW,083_CMS_INDEX_INDEX_ID_HOME,083_LAYOUT_GENERAL_CACHE_TAG,083_MAGE";}
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1490269304;s:6:"expire";i:9999999999;s:4:"tags";s:115:"083_DEFAULT,083_CMS_INDEX_INDEX,083_CMS_PAGE_VIEW,083_CMS_INDEX_INDEX_ID_HOME,083_LAYOUT_GENERAL_CACHE_TAG,083_MAGE";}
 <!--
     <referenceContainer name="right">
         <action method="unsetChild"><argument name="alias" xsi:type="string">right.reports.product.viewed</argument></action>
@@ -673,6 +673,14 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1489823621;s:6:"expire";i:9999999999;s:4:"t
          </container>
       </container>
    </referenceContainer>
+   <referenceBlock name="catalog.topnav">
+      <block class="Magento\Cms\Block\Block" name="navigation-blocks">
+         <arguments>
+            <argument name="block_id" xsi:type="string">nbs-top-navigation-blocks</argument>
+         </arguments>
+      </block>
+      <container name="topmenu-promotions"/>
+   </referenceBlock>
    <referenceContainer name="cms_footer_links_container">
       <block class="Magento\Cms\Block\Block">
          <arguments>
@@ -692,7 +700,7 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1489823621;s:6:"expire";i:9999999999;s:4:"t
 </body>
 <body>
    <referenceContainer name="header-wrapper">
-      <block class="\Magento\Framework\View\Element\Template" name="customer.account.top.link" template="Magento_Customer::account/toplink.phtml" after="wishlist.header.link">
+      <block class="\Magento\Customer\Block\Account\Customer" name="customer.account.top.link" template="Magento_Customer::account/toplink.phtml" after="wishlist.header.link">
          <block class="Magento\Framework\View\Element\Html\Links" name="customer.account.dd.links">
             <block class="Magento\Customer\Block\Account\RegisterLink" name="register-link">
                <arguments>
@@ -713,8 +721,11 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1489823621;s:6:"expire";i:9999999999;s:4:"t
     </body>
 <body>
    <referenceContainer name="header-wrapper">
-      <block class="\Magento\Framework\View\Element\Template" name="wishlist.header.link" template="Magento_Wishlist::header/link.phtml" after="minicart"/>
+      <block class="\Magento\Framework\View\Element\Template" name="wishlist.header.link" template="Magento_Wishlist::header/link.phtml" after="minicart">
+         <block class="Magento\Wishlist\Block\Customer\Sidebar" name="wishlist_sidebar" as="wishlist" template="Magento_Wishlist::header/top-item.phtml"/>
+      </block>
    </referenceContainer>
+   <referenceContainer name="sidebar.additional" remove="true"/>
 </body>
 <body/>
 <body>
