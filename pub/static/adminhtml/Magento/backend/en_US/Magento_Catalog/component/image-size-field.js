@@ -1,0 +1,1 @@
+/var/www/nbs-ecommerce/vendor/magento/module-catalog/view/adminhtml/web/component/image-size-field.js

@@ -1,0 +1,246 @@
+.sidebar-main {
+    width: 250px;
+}
+
+.toolbar-products {
+    .sorter {
+        .sorter-options {
+            background-color: transparent;
+            box-shadow: 0 0 0;
+            border-radius: 0; 
+        }
+    }
+
+    .modes {
+        float: right;
+
+        .modes-mode {
+            background: transparent;
+            box-shadow: 0 0 0;
+            border-radius: 0;
+            border: none;
+            padding: 0;
+
+            &.active {
+                background: none;
+            }
+
+            &:last-child {
+                border-radius: 0;
+            }
+
+            &:before {
+                font-size: 26px;
+                color:#000;
+            }
+        }
+    }
+}
+
+.filter .block-subtitle {
+    border-bottom: none;
+}
+
+.filter-options {
+    border: 2px solid #e5e5e5;
+
+    .filter-options-item {
+        border-bottom: 2px solid #e5e5e5;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+
+// Product grid
+.products-grid {
+    .product-items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .product-item {
+        width: inherit;
+        flex: 1 1 auto;
+
+        .product-item-info {
+            border: 2px solid transparent;
+
+            &:hover {
+                border: 2px solid #e5e5e5;
+                box-shadow: 0 0 0;
+                margin: 0;
+                padding: 0;
+
+                .product-item-inner {
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    background: #e5002b;
+                    box-shadow: 0 0 0;
+                    border: none;
+                    margin: 0;
+                    padding: 0;
+                    // ??
+                    height: 40px;
+
+                    &:before {
+                        content: initial;
+                    }
+
+                    .action.tocart.primary {
+                        &:before {
+                            content: '\0049' !important;
+                            font-size: 20px;
+                            font-family: 'nbs icons';
+                        }
+
+                        span {
+                            display: none;
+                        }
+                    }
+
+                    .actions-secondary {
+                        .towishlist {
+                            &:before {
+                                content: '\004a' !important;
+                                font-size: 20px;
+                                font-family: 'nbs icons';
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .swatch-attribute {
+                display: none;
+            }
+
+            .product-item-name {
+                .product-item-link {
+                    color: #000;
+                    text-decoration: none;
+                }
+            }
+
+            .rating-summary {
+                .rating-result {
+                    > span:before {
+                        color: #ffc000;
+                    }
+                }
+            }
+
+            .reviews-actions {
+                a {
+                    color: #b8b8b8;
+
+                    // &:before {
+                    //     content: "(";
+                    // }
+
+                    // &:after {
+                    //     content: ")";
+                    // }
+                }
+            }
+
+            .price-box {
+                .price {
+                    color: #c60026;
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+
+// Navigation bullet
+.pages {
+    .item {
+        border: 1px solid #999;
+        color: #999;
+
+        a.page {
+            color: #999;
+        }
+
+        &.current {
+            border: 1px solid #000;
+            background: #000;
+
+            .page {
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+// DROPDOWN MENU ON HOVER
+body{padding: 3em; }
+#menu * { 
+    padding:0; 
+    margin: 0; 
+    list-style-type:none;}
+#menu { 
+    margin-top: 50px;
+    float: left;
+    line-height: 10px; 
+    left: 0;
+    display: block;
+    top: -50px;
+    position: relative;
+    z-index: 3;
+    }
+#menu a { 
+    display: block; 
+    text-decoration: none; 
+    color: #fff;}
+#menu ul li ul li a:hover { 
+    padding-left:9px;}
+#menu ul li ul li {
+    width: 115px; 
+    border: none; 
+    color: #fff;  
+    padding-top: 3px; 
+    padding-bottom:3px; 
+    padding-left: 3px; 
+    padding-right: 3px; 
+    background: #000;}
+#menu ul li ul li a { 
+    padding-top:3px; 
+    padding-bottom:3px;}
+#menu ul li {
+    float: left; 
+    width: 115px; 
+    font-weight: bold; 
+    background: #e5002b;}
+#menu ul li a { 
+    font-weight: bold;
+    padding: 15px 10px;}
+#menu li{ 
+    position:relative; 
+    float:left;}
+#menu ul li ul, #menu:hover ul li ul, #menu:hover ul li:hover ul li ul{ 
+    display:none;
+    list-style-type:none; 
+    width: 115px;}
+#menu:hover ul, #menu:hover ul li:hover ul, #menu:hover ul li:hover ul li:hover ul { 
+    display:block;}
+#menu:hover ul li:hover ul li:hover ul { 
+    position: absolute;
+    margin-left: 145px;
+    margin-top: -22px;
+    font: 10px;}
+#menu:hover ul li:hover ul { 
+    position: absolute;
+    margin-top: 1px;
+    font: 10px;
+    bottom:100%;
+}

@@ -1,0 +1,1 @@
+/var/www/nbs-ecommerce/vendor/magento/module-theme/view/adminhtml/web/js/bootstrap.js

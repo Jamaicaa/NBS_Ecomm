@@ -717,9 +717,23 @@ button {
 
 .footer-top {
     display: flex;
-    border-top: 1px solid #444;
-    border-bottom: 1px solid #444;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
     text-align: center;
+    padding: 3em 0;
+
+    h2 {
+        font-size: 18px;
+        font-weight: 800;
+        color: #000;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 14px;
+        color: #999;
+        margin-bottom: 0;
+    }
 
     .newsletter-link {
         flex: 1;
@@ -727,15 +741,44 @@ button {
         .newsletter {
             float: none;
             width: 100%;
+            margin-bottom: 0;
+
+            .field {
+                .control {
+                    &:before {
+                        content: ' ';
+                    }
+                }
+
+                input[type="email"] {
+                    border: 2px solid #efefef;
+                    height: 36px;
+                    margin-top: 21px;
+                }
+            }
+            
+            .action.primary.subscribe {
+                padding: 9px 15px;
+                margin-top: 21px;
+            }
         }
     }
 
     .store-locator-link {
         flex: 1;
+
+        .action.primary {
+            height: 39px;
+            margin-top: 20px;
+        }
     }
 
     .social-media-links {
         flex: 1;
+
+        h2 {
+            margin-bottom: 20px;
+        }
 
         .social-media-icons {
             display: flex; 
@@ -773,8 +816,23 @@ button {
 }
 
 .footer-mid { 
+    padding: 3em 0;
+
     & > .footer-about {
         display: flex;
+
+        h3 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #000;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        a {
+            font-size: 14px;
+            color: #999;
+        }
     }
 
     .footer-about-nbs,
@@ -874,23 +932,24 @@ button {
 .footer-bottom {
     display: flex; 
     align-items: center;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #e5e5e5;
     padding-top: 1.5em;
+    justify-content: space-between;
 
     .footer-logo {
         background: url('../images/nbs-logo-black@2x.png') no-repeat;
-        background-size: 100%; 
-        width: 167px;
-        height: 60px;
-        flex: 1 1 auto;
+        background-size: contain; 
+        width: 168px;
+        height: 55px;
+        
     }
 
     .copyright {
         background: #fff;
         color: #999;
         display: flex;
-        flex: 1 1 50%;
         flex-direction: column;
+        flex-basis: 50%;
         text-align: left;
 
         p {
@@ -904,13 +963,14 @@ button {
         ul {
             display: flex;
             justify-content: space-between;
+            margin-top: 15px;
         }
     }
 
     .download-app-links {
         display: flex;
         justify-content: space-between;
-        flex: 1 1 15%;
+        width: 260px;
 
         .app-store {
             background: url('../images/app-store@2x.png') no-repeat;
