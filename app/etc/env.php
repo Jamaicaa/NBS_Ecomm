@@ -22,7 +22,7 @@ return array (
         'host' => 'localhost',
         'dbname' => 'nbs_ecommerce',
         'username' => 'root',
-        'password' => 'root',
+        'password' => 'Admin123',
         'active' => '1',
       ),
     ),

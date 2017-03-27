@@ -1,0 +1,86 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1490616782;s:6:"expire";i:1490620382;s:4:"tags";s:67:"4de_BLOCK_HTML,4de_CATALOG_CATEGORY,4de_CATALOG_CATEGORY_3,4de_MAGE";}
+<nav class="top-navigation">
+    <ul class="main-nav">
+        <li class="item outer-level departments-dd">
+            <a href="#">
+                <span>All Departments</span>
+            </a>
+            <div class="menu-container">
+                <ul class="menu-items">
+                    <li  class="level0 nav-1 first last level-top"><a href="http://gprsecommerce.loc:8585/books.html"  class="level-top" ><span>Books</span></a></li>                    <li class="level0 nav-6 last level-top"><a href="#" class="level-top"><span>See All Departments</span></a></li>
+                </ul>
+                <div class="sub-menu" id="submenu-container">
+                </div>
+                <div class="promo-block">
+                    <img src='http://gprsecommerce.loc:8585/static/version1490616778/frontend/NBS/default/en_US/images/free-delivery.jpg' alt="Promotion"/>
+                                    </div>
+            </div>
+        </li>
+        <ul>
+<li class="item outer-level highlight"><a href="#">Back to School Sale</a></li>
+<li class="item outer-level"><a href="#">Gift Guide</a></li>
+<li class="item outer-level"><a href="#">Cash on Delivery</a></li>
+<li class="item outer-level"><a href="#">Tips &amp; Ideas</a></li>
+<li class="item outer-level"><a href="#">Solutions for your Business</a></li>
+</ul>        <ul class="misc-navigation-blocks">
+<li class="item outer-level highlight"><a href="#">Introducing Pick Up Order!</a></li>
+</ul>    </ul>
+</nav>
+<script type="text/javascript">
+    require(['jquery'], function($) {
+        $('ul.menu-items li.level0').hover( function () {
+            $('#submenu-container').html('');
+            $('ul.menu-items li.level0').removeClass('active');
+            if ($(this).hasClass('parent')) {
+                $('#submenu-container')
+                    .removeClass('col-count-1')
+                    .removeClass('col-count-2')
+                    .removeClass('col-count-3')
+                    .removeClass('col-count-4');
+                $(this).addClass('active');
+                $(this).find('ul.level0.submenu').clone().appendTo('#submenu-container');
+
+                var items = jQuery('#submenu-container ul li').length;
+                var colCount = 1;
+                if (items >= 16) {
+                    colCount = 2;
+                }
+                if (items >= 27) {
+                    colCount = 3;
+                }
+                if (items >= 37) {
+                    colCount = 4;
+                }
+                $('#submenu-container').addClass('col-count-' + colCount);
+            }
+        });
+    });
+</script>
+
+<script>
+
+    require(['jquery'], function($) {
+        var body = $('body');
+        body.append('<div class="cover"></div>');
+        var cover = $('.cover');
+        setInterval( function () {
+            var selectors = [
+                '.minicart-wrapper .mage-dropdown-dialog:visible',
+                '.wishlist-wrapper .mage-dropdown-dialog:visible',
+                '.account-wrapper .mage-dropdown-dialog:visible',
+                '.menu-container:visible',
+                '#store-locator-dropdown-wrapper:visible',
+                '#search_autocomplete:visible'
+            ];
+            var showCover = $(selectors.join()).length;
+            if (showCover > 0 && !cover.is(':visible')) {
+                cover.show();
+                body.addClass('cover-open');
+            } else if (showCover == 0 && cover.is(':visible')){
+                cover.hide();
+                body.removeClass('cover-open');
+            }
+        });
+
+    });
+</script>

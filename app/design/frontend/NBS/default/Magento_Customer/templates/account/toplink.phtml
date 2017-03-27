@@ -13,17 +13,26 @@
                 "triggerClass":"active",
                 "parentClass":"active",
                 "buttons":[]}}'>
-        <div id="minicart-content-wrapper" data-bind="scope: 'account_actions_content'">
+        <div id="customer-actions-content-wrapper" data-bind="scope: 'account_actions_content'">
             <ul>
                 <?php if($block->customerLoggedIn()): ?>
                 <li>
                     <a href="/customer/account">My Account</a>
                 </li>
                 <li>
-                    <a href="/sales/order/history">My Orders</a>
+                    <a href="#">My Loyalty Points & Rewards</a>
                 </li>
                 <li>
-                    <a href="/checkout/cart">My Cart</a>
+                    <a href="/sales/order/history">Orders &amp; Tracking</a>
+                </li>
+                <li>
+                    <a href="#">Exchange &amp; Return</a>
+                </li>
+                <li>
+                    <a href="#">Confirm Payment</a>
+                </li>
+                <li>
+                    <a href="#">Preferences</a>
                 </li>
                 <li>
                     <a href="/wishlist">My Wishlist</a>

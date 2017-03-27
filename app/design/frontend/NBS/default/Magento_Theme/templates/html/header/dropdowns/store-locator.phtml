@@ -1,0 +1,121 @@
+<li data-block="store-locator-dropdown">
+    <a class="action showstorelocator" href="#" data-bind="scope: 'storelocator_dropdown_content'">
+        <i class="icon-locator"></i><span class="text"><?php /* @escapeNotVerified */ echo __('Store Finder'); ?></span>
+    </a>
+    <div class="block topbar-dropdown block-account-actions empty" data-role="dropdownDialog"
+         data-mage-init='{"dropdownDialog":{
+                "appendTo":"[data-block=store-locator-dropdown]",
+                "triggerTarget":".showstorelocator",
+                "timeout": "2000",
+                "closeOnMouseLeave": false,
+                "closeOnEscape": true,
+                "triggerClass":"active",
+                "parentClass":"active",
+                "buttons":[]
+            }}'>
+        <div id="store-locator-dropdown-wrapper" data-bind="scope: 'storelocator_dropdown_content'">
+            <div class="store-locator" id="store-locator-dropdown">
+                <button type="button" class="action close" data-action="close" title="Close">
+                    <span>Close</span>
+                </button>
+                <div class="search-box">
+                    <h4 class="label uppercase">Find a Store</h4>
+                    <form class="grid">
+                        <div class="field col">
+                            <div class="control">
+                                <input type="text" placeholder="Select an area"/>
+                            </div>
+                        </div>
+                        <div class="field colx2">
+                            <div class="control">
+                                <input type="text" placeholder="Filter search"/>
+                            </div>
+                        </div>
+                        <div class="actions col">
+                            <button class="action primary">
+                                <span>Locate Now</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="labels grid">
+                    <div class="col">
+                        <h4 class="label underline uppercase">Stores near you:</h4>
+                    </div>
+                    <div class="col">
+                        <h4 class="label underline highlight">Find a store on map</h4>
+                    </div>
+                    <div class="col">
+                        <h4 class="label underline highlight">See more nearby stores</h4>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <div class="stores grid">
+                    <div class="store col">
+                        <div class="title">
+                            <h4>The Podium</h4>
+                        </div>
+                        <div class="location">
+                            <p>2nd Flr. The Podium 12th ADB Avenue Ortigas Center, Mandaluyong City</p>
+                        </div>
+                        <div class="actions">
+                            <button class="action primary">
+                                <span>View Store</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="store col">
+                        <div class="title">
+                            <h4>Shaw</h4> <span class="store-hour-status">Open</span> <span class="store-hours">until 10PM</span>
+                        </div>
+                        <div class="location">
+                            <p>2nd Flr. The Podium 12th ADB Avenue Ortigas Center, Mandaluyong City</p>
+                        </div>
+                        <div class="actions">
+                            <button class="action primary">
+                                <span>View Store</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="store col">
+                        <div class="title">
+                            <h4>The Podium</h4>
+                        </div>
+                        <div class="location">
+                            <p>2nd Flr. The Podium 12th ADB Avenue Ortigas Center, Mandaluyong City</p>
+                        </div>
+                        <div class="actions">
+                            <button class="action primary">
+                                <span>View Store</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="store col">
+                        <div class="title">
+                            <h4>The Podium</h4>
+                        </div>
+                        <div class="location">
+                            <p>2nd Flr. The Podium 12th ADB Avenue Ortigas Center, Mandaluyong City</p>
+                        </div>
+                        <div class="actions">
+                            <button class="action primary">
+                                <span>View Store</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+
+
+<script>
+    require(['jquery'], function ($) {
+        var storeLocatorDropdown = $('[data-block="store-locator-dropdown"]');
+        storeLocatorDropdown.on('click', '[data-action="close"]', function (event) {
+            event.stopPropagation();
+            storeLocatorDropdown.find('[data-role="dropdownDialog"]').dropdownDialog('close');
+        });
+    });
+</script>

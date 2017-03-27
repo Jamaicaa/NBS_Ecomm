@@ -41,7 +41,7 @@ HTML;
             'identifier' => 'nbs-top-center-navigation-links',
             'content' => $content,
             'stores' => [0],
-            'is_active' => 1,
+            'is_active' => 0,
         ];
         try {
             $this->blockFactory->create()->setData($block)->save();

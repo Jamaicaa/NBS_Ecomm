@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/lib/web/jquery/jquery.validate.js
+/var/www/html/nbs_ecommerce/lib/web/jquery/jquery.validate.js

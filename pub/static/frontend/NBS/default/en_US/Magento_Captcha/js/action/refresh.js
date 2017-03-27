@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/vendor/magento/module-captcha/view/frontend/web/js/action/refresh.js
+/var/www/html/nbs_ecommerce/vendor/magento/module-captcha/view/frontend/web/js/action/refresh.js

@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/lib/web/requirejs/domReady.js
+/var/www/html/nbs_ecommerce/lib/web/requirejs/domReady.js

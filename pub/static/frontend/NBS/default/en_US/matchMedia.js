@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/lib/web/matchMedia.js
+/var/www/html/nbs_ecommerce/lib/web/matchMedia.js

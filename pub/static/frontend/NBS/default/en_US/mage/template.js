@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/lib/web/mage/template.js
+/var/www/html/nbs_ecommerce/lib/web/mage/template.js

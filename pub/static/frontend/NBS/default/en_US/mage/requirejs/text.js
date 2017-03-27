@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/lib/web/mage/requirejs/text.js
+/var/www/html/nbs_ecommerce/lib/web/mage/requirejs/text.js

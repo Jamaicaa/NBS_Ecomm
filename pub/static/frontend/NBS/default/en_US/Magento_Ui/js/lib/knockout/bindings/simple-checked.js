@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/vendor/magento/module-ui/view/base/web/js/lib/knockout/bindings/simple-checked.js
+/var/www/html/nbs_ecommerce/vendor/magento/module-ui/view/base/web/js/lib/knockout/bindings/simple-checked.js

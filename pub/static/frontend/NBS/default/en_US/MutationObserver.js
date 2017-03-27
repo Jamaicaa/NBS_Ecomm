@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/lib/web/MutationObserver.js
+/var/www/html/nbs_ecommerce/lib/web/MutationObserver.js

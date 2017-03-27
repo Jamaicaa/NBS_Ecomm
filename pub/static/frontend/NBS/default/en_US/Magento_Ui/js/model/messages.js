@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/vendor/magento/module-ui/view/frontend/web/js/model/messages.js
+/var/www/html/nbs_ecommerce/vendor/magento/module-ui/view/frontend/web/js/model/messages.js

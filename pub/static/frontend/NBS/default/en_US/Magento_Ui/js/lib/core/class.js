@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/vendor/magento/module-ui/view/base/web/js/lib/core/class.js
+/var/www/html/nbs_ecommerce/vendor/magento/module-ui/view/base/web/js/lib/core/class.js

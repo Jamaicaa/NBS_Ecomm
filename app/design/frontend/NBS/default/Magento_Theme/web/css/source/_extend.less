@@ -1,5 +1,5 @@
-@toplink-icons-color: @primary-color-dark-grey;
-@toplink-icons-color-hover: @secondary-color-dark-grey;
+@toplink-icons-color: @secondary-color-dark-grey;
+@toplink-links-color: @primary-color-dark-grey;
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
   .top-header {
@@ -31,17 +31,21 @@
       list-style: none;
       margin-bottom: 1.1rem;
       li {
-        font-size: 1.285rem;
+        font-size: 1.1rem;
         display: inline;
         & > a {
-          color: @toplink-icons-color;
+          color: @toplink-links-color;
           text-decoration: none;
+        }
+        & > a > i:before {
+          color: @toplink-icons-color;
         }
         & > a > span {
           padding-left: 5px;
+          color: @toplink-links-color;
         }
         &:not(:last-child) {
-          padding-right: 5px;
+          padding-right: 1rem;
         }
       }
     }
@@ -59,7 +63,10 @@
 
 .wishlist-wrapper, .account-wrapper, .minicart-wrapper {
   float: right;
-  margin-left: 15px;
+  margin-left: 2.3rem;
+  & a {
+    color: @primary-color-dark-grey !important;
+  }
   & > .action {
     &:before {
       font-family: 'nbs icons' !important;
@@ -75,7 +82,7 @@
       text-align: center;
     }
     &.active:before, &:hover:before{
-      color: @toplink-icons-color-hover !important;
+      color: @toplink-links-color !important;
     }
     .text {
       .disappear;
@@ -116,42 +123,15 @@
   display: none;
 }
 
-.wishlist-wrapper .action:before {
+.wishlist-wrapper > .action:before {
   content:'\004a' !important;
   font-weight: 900 !important;
 }
-.account-wrapper .action:before {
+.account-wrapper > .action:before {
   content:'\0047' !important;
   font-weight: 500 !important;
 }
-.minicart-wrapper .action.showcart:before {
+.minicart-wrapper > .action.showcart:before {
   content:'\0049' !important;
   font-weight: 900 !important;
-}
-
-.disappear() {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-.wishlist-wrapper .topbar-dropdown {
-  padding: 0;
-}
-.block-wishlist {
-  ol.product-items {
-
-  }
-  ol.product-items > li.product-item {
-    border-bottom: 1px solid black;
-    & .product-item-info {
-      .product-item-photo {
-        float: left;
-      }
-    }
-  }
 }

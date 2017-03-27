@@ -1,0 +1,110 @@
+ul.topbar-links li[data-block="store-locator-dropdown"] {
+    .topbar-dropdown {
+      margin-bottom: 1.5rem;
+    }
+    div.mage-dropdown-dialog {
+      .dropshadow;
+      border: 1px solid @secondary-color-light-grey;
+      border-top: none;
+      padding: 10px 50px;
+      background: white;
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 10;
+      .highlight {
+        color: @primary-theme-color;
+      }
+      .uppercase {
+        text-transform: uppercase;
+      }
+      .underline {
+        position: relative;
+        &:after {
+          content: " ";
+          border: 2px solid @secondary-color-light-grey;
+          width: 2.5rem;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          margin-bottom: -1rem;
+        }
+      }
+      .grid {
+        display: flex;
+        .col:not(:last-child), .colx2:not(:last-child) {
+          padding-right: 1rem;
+        }
+        .col {
+          flex: 1 1 25%;
+        }
+        .colx2 {
+          flex: 1 1 50%;
+        }
+      }
+      .store-locator .action.close {
+        background: none;
+        color: @primary-color-dark-grey;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: none;
+        box-shadow: none;
+        margin: 0.5rem;
+        &:after {
+          content: '\E616';
+          font-family: @luma__font-name;
+        }
+        & > span {
+          display: none;
+        }
+      }
+      .store-locator .search-box {
+        & > h4.label {
+          margin: 1rem 0;
+        }
+        & > form {
+          & > .field .control input[type=text] {
+            background: @secondary-color-light-grey;
+            border: none;
+          }
+          & > .field, & > .actions {
+          }
+          & > .field.filter-box {
+          }
+          & .actions button.action.primary {
+            width: 100%;
+          }
+        }
+      }
+      .store-locator .labels {
+        margin-bottom: 1.5rem;
+      }
+      .store-locator .stores {
+        .store .title {
+          & > h4, & > span {
+            display: inline-block;
+          }
+          & > h4 {
+            margin: 0 1rem 0 0;
+          }
+          & > .store-hour-status {
+            text-transform: uppercase;
+            padding: .25rem .75rem;
+            background: @secondary-color-light-grey;
+            .border-radius(.2rem);
+          }
+          & > .store-hours {}
+        }
+        .store .location {
+          color: @secondary-color-dark-grey;
+        }
+        .store .actions {
+          margin-top: 1rem;
+          & > .action {
+            font-size: 1rem;
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+}

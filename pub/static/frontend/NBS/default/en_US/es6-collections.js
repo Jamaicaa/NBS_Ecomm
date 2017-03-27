@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/lib/web/es6-collections.js
+/var/www/html/nbs_ecommerce/lib/web/es6-collections.js

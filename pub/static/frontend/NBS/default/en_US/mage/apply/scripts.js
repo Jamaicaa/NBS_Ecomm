@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/lib/web/mage/apply/scripts.js
+/var/www/html/nbs_ecommerce/lib/web/mage/apply/scripts.js

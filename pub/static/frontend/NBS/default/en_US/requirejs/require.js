@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/lib/web/requirejs/require.js
+/var/www/html/nbs_ecommerce/lib/web/requirejs/require.js

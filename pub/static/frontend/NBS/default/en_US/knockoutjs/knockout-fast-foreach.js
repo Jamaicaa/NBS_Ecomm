@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/lib/web/knockoutjs/knockout-fast-foreach.js
+/var/www/html/nbs_ecommerce/lib/web/knockoutjs/knockout-fast-foreach.js

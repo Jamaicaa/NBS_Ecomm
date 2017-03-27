@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/vendor/magento/module-search/view/frontend/web/form-mini.js
+/var/www/html/nbs_ecommerce/vendor/magento/module-search/view/frontend/web/form-mini.js

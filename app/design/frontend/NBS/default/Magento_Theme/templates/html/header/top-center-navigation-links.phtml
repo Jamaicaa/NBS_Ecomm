@@ -1,0 +1,15 @@
+<?php
+
+/** @var $block \Magento\Framework\View\Element\Template */
+?>
+
+<ul class="topbar-links">
+    <li><a href="#"><i class="icon-card"></i><span>Loyalty Membership</span></a></li>
+    <li><a href="#"><i class="icon-box"></i><span>Subscription Boxes</span></a></li>
+    <li><a href="#"><i class="icon-blog"></i><span>Blog</span></a></li>
+    <li><a href="#"><i class="icon-wishlist"></i><span>Wishlists</span></a></li>
+    <?php echo $block->getChildHtml('store-locator-dropdown'); ?>
+
+    <li><a href="#"><i class="icon-track-order"></i><span>Track Orders</span></a></li>
+    <li><a href="#"><i class="icon-help"></i><span>Help</span></a></li>
+</ul>

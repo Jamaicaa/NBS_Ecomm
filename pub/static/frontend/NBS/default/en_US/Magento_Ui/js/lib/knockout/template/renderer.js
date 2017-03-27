@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/vendor/magento/module-ui/view/base/web/js/lib/knockout/template/renderer.js
+/var/www/html/nbs_ecommerce/vendor/magento/module-ui/view/base/web/js/lib/knockout/template/renderer.js

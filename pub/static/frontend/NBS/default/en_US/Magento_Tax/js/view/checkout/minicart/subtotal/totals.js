@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/vendor/magento/module-tax/view/frontend/web/js/view/checkout/minicart/subtotal/totals.js
+/var/www/html/nbs_ecommerce/vendor/magento/module-tax/view/frontend/web/js/view/checkout/minicart/subtotal/totals.js

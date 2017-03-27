@@ -1,1 +1,1 @@
-/var/www/nbs-ecommerce/vendor/magento/module-checkout/view/frontend/web/js/sidebar.js
+/var/www/html/nbs_ecommerce/vendor/magento/module-checkout/view/frontend/web/js/sidebar.js

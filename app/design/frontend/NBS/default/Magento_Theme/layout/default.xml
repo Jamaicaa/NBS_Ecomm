@@ -16,10 +16,10 @@
         <referenceContainer name="header-wrapper">
             <container htmlTag="div" htmlClass="top-header" after="logo">
                 <container htmlTag="div" htmlClass="col-left">
-                    <block class="Magento\Cms\Block\Block">
-                        <arguments>
-                            <argument name="block_id" xsi:type="string">nbs-top-center-navigation-links</argument>
-                        </arguments>
+                    <block class="\Magento\Framework\View\Element\Template" name="top-center-navigation-links"
+                           template="Magento_Theme::html/header/top-center-navigation-links.phtml">
+                        <block class="\Magento\Framework\View\Element\Template" name="store-locator-dropdown"
+                               template="Magento_Theme::html/header/dropdowns/store-locator.phtml"/>
                     </block>
                 </container>
                 <container htmlTag="div" htmlClass="col-right">
@@ -35,6 +35,11 @@
             <block class="Magento\Cms\Block\Block" name="navigation-blocks">
                 <arguments>
                     <argument name="block_id" xsi:type="string">nbs-top-navigation-blocks</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="misc-navigation-blocks">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">nbs-top-misc-navigation-blocks</argument>
                 </arguments>
             </block>
             <container name="topmenu-promotions"/>
@@ -54,6 +59,7 @@
         <referenceBlock name="wish-list-link" remove="true"/>
         <referenceBlock name="footer_links" remove="true"/>
         <referenceBlock name="copyright" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
         <referenceContainer name="header.panel" remove="true"/>
         <referenceContainer name="header.panel.wrapper" remove="true"/>
         <referenceContainer name="compare-link-wrapper" remove="true"/>

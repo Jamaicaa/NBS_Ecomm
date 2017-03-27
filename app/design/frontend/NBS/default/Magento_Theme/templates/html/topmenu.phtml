@@ -30,35 +30,70 @@
                 <div class="sub-menu" id="submenu-container">
                 </div>
                 <div class="promo-block">
-                    <p>Top Best Selling Books of the Year So Far</p>
-                    <p>Fiction Bestsellers</p>
                     <img src='<?php echo $this->getViewFileUrl('images/free-delivery.jpg'); ?>' alt="Promotion"/>
                     <?php echo $block->getChildHtml('topmenu-promotions'); ?>
                 </div>
             </div>
         </li>
         <?php echo $block->getChildHtml('navigation-blocks'); ?>
+        <?php echo $block->getChildHtml('misc-navigation-blocks'); ?>
     </ul>
 </nav>
 <script type="text/javascript">
-    require(['jquery'], function($){
+    require(['jquery'], function($) {
         $('ul.menu-items li.level0').hover( function () {
             $('#submenu-container').html('');
             $('ul.menu-items li.level0').removeClass('active');
             if ($(this).hasClass('parent')) {
+                $('#submenu-container')
+                    .removeClass('col-count-1')
+                    .removeClass('col-count-2')
+                    .removeClass('col-count-3')
+                    .removeClass('col-count-4');
                 $(this).addClass('active');
-                var subMenu = $(this).find('ul.level0.submenu');
-                subMenu.clone().appendTo('#submenu-container');
-                subMenu.clone().appendTo('#submenu-container');
-                subMenu.clone().appendTo('#submenu-container');
-                subMenu.clone().appendTo('#submenu-container');
-                subMenu.clone().appendTo('#submenu-container');
-                subMenu.clone().appendTo('#submenu-container');
-                subMenu.clone().appendTo('#submenu-container');
-                subMenu.clone().appendTo('#submenu-container');
-                subMenu.clone().appendTo('#submenu-container');
+                $(this).find('ul.level0.submenu').clone().appendTo('#submenu-container');
+
+                var items = jQuery('#submenu-container ul li').length;
+                var colCount = 1;
+                if (items >= 16) {
+                    colCount = 2;
+                }
+                if (items >= 27) {
+                    colCount = 3;
+                }
+                if (items >= 37) {
+                    colCount = 4;
+                }
+                $('#submenu-container').addClass('col-count-' + colCount);
             }
         });
     });
 </script>
 
+<script>
+
+    require(['jquery'], function($) {
+        var body = $('body');
+        body.append('<div class="cover"></div>');
+        var cover = $('.cover');
+        setInterval( function () {
+            var selectors = [
+                '.minicart-wrapper .mage-dropdown-dialog:visible',
+                '.wishlist-wrapper .mage-dropdown-dialog:visible',
+                '.account-wrapper .mage-dropdown-dialog:visible',
+                '.menu-container:visible',
+                '#store-locator-dropdown-wrapper:visible',
+                '#search_autocomplete:visible'
+            ];
+            var showCover = $(selectors.join()).length;
+            if (showCover > 0 && !cover.is(':visible')) {
+                cover.show();
+                body.addClass('cover-open');
+            } else if (showCover == 0 && cover.is(':visible')){
+                cover.hide();
+                body.removeClass('cover-open');
+            }
+        });
+
+    });
+</script>
